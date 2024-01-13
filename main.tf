@@ -12,5 +12,5 @@
 }
 
 resource "null_resource" "pet" {
-  for_each = range(1, 500)
+  for_each = [for pet in range(1, 500): "#{pet}"]
 }
