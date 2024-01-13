@@ -12,5 +12,5 @@
 }
 
 resource "null_resource" "pet" {
-  for_each = tolist([for pet in range(1, 500): to_string(pet)])
+  for_each = tolist([for pet in range(1, 500): tostring(pet)])
 }
